@@ -1,6 +1,6 @@
 FROM alpine:3.8
 RUN apk add --no-cache py3-pip python3 && \
-    pip3 install flask
+    pip3 install flask Flask-Opentracing jaeger-client
 COPY . /usr/src/app/
 ENV FLASK_APP app.py
 WORKDIR /usr/src/app
